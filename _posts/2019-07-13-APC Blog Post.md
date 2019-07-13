@@ -27,11 +27,11 @@ $$ln(y_{ijk}) = \sigma+\alpha_i+\beta_j+\gamma_k $$
 
 Where:
 
-* <img src="https://latex.codecogs.com/svg.latex?y_{ijk}"  /> is the number of instances for age $i$ and time period $j$.
-* $\sigma$ is a constant
-* $\alpha$ is the age effect.
-* $\beta_j$ is the effect for the period.
-* $\gamma_k$ is the effect of the cohort.
+* <img src="https://latex.codecogs.com/svg.latex?y_{ijk}"  /> is the number of instances for age <img src="https://latex.codecogs.com/svg.latex?i}"  /> and time period <img src="https://latex.codecogs.com/svg.latex?j}"  />.
+* <img src="https://latex.codecogs.com/svg.latex?sigma}"  /> is a constant
+* <img src="https://latex.codecogs.com/svg.latex?\alpha}"  /> is the age effect.
+* <img src="https://latex.codecogs.com/svg.latex?\beta_j}"  /> is the effect for the period.
+* <img src="https://latex.codecogs.com/svg.latex?\gamma_k}"  />  is the effect of the cohort.
 
 # The Identification Problem
  
