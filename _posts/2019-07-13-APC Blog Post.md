@@ -17,7 +17,7 @@ Reducing the model to these three variables provides information about the indep
 
 The example below uses data from the [apc package](https://cran.r-project.org/web/packages/apc/index.html) in R. The actual data originates from [Clayton and Schifflers' paper](https://www.ncbi.nlm.nih.gov/pubmed/3629047) and *Cancer Incidence in Five Continents*. It displays the  frequency for rates of lung cancer in Belgium: 
 
-![](img/Example from APC-1.png)<!-- -->
+![](/img/hello_world.jpeg)<!-- -->
 
 We can see what we might expect: Someone who is younger, all things held equal, has a lower chance of lung cancer. Interestingly, there was an uptick in cancer occurrences in the 1965-1969 for the 25-29 age group.
 
