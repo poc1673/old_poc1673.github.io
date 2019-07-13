@@ -23,7 +23,7 @@ The example below uses data from the [apc package](https://cran.r-project.org/we
 We can see what we might expect: Someone who is younger, all things held equal, has a lower chance of lung cancer. Interestingly, there was an uptick in cancer occurrences in the 1965-1969 for the 25-29 age group.
 
 A simple example of an APC model is:
-<img src="https://latex.codecogs.com/svg.latex?ln(y_{ijk}) = \sigma+\alpha_i+\beta_j+\gamma_k}"  />
+<img src="https://latex.codecogs.com/svg.latex?ln(y_{ijk}) = \sigma+\alpha_i+\beta_j+\gamma_k"  />
 
 Where:
 
