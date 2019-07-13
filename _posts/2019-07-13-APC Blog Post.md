@@ -6,7 +6,8 @@ output:
   html_document:
     keep_md: yes
 ---
-  
+  <img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
+
  Age-period-cohort analysis is a time series methodology used to describe the relationship between some phenomena (like cancer rates, or defaults on loans) by using three variables:
 
 * Age - This could be the age of a cancer patient or how many months a loan has existed.
