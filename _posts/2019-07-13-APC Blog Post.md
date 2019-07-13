@@ -6,7 +6,7 @@ output:
   html_document:
     keep_md: yes
 ---
-  <img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
+  
 
  Age-period-cohort analysis is a time series methodology used to describe the relationship between some phenomena (like cancer rates, or defaults on loans) by using three variables:
 
@@ -27,7 +27,7 @@ $$ln(y_{ijk}) = \sigma+\alpha_i+\beta_j+\gamma_k $$
 
 Where:
 
-* $y_{ijk}$ is the number of instances for age $i$ and time period $j$.
+* <img src="https://latex.codecogs.com/svg.latex?y_{ijk}"  /> is the number of instances for age $i$ and time period $j$.
 * $\sigma$ is a constant
 * $\alpha$ is the age effect.
 * $\beta_j$ is the effect for the period.
