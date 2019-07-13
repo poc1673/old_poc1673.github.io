@@ -7,19 +7,7 @@ output:
     keep_md: yes
 ---
   
-  
-
-  
-<style>
-  body {
-  text-align: justify}
-</style>
-
-h<sub>&theta;</sub>(x) = &theta;<sub>o</sub> x + &theta;<sub>1</sub>x
-
-
-
-Age-period-cohort analysis is a time series methodology used to describe the relationship between some phenomena (like cancer rates, or defaults on loans) by using three variables:
+ Age-period-cohort analysis is a time series methodology used to describe the relationship between some phenomena (like cancer rates, or defaults on loans) by using three variables:
 
 * Age - This could be the age of a cancer patient or how many months a loan has existed.
 * Cohort - Unique qualities shared by specific groups as they move through time. Generally this is a birth cohort or in the case of  initiation cohort. In our cancer example, we may compare baby boomers to Gen Xers.
