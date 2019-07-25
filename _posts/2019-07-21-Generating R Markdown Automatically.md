@@ -74,4 +74,4 @@ text_to_knit <- sapply(X = 1:length(regression_results),FUN = function(x){ knit(
 ```
 `r paste(knit(text = knit_expand(text=text_to_knit)),collapse = '\n') `
 
-If you want to see the finished output of this  post in a notebook format, you can see the notebook here. It includes all of the plots and analysis covered in this blog post.
+If you want to see the finished output of this  post in a notebook format, you can see the pdf version [here](https://github.com/poc1673/poc1673.github.io/blob/master/_posts/Automatic%20R%20Markdown.pdf). It includes all of the plots and analysis covered in this blog post.
