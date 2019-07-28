@@ -1,4 +1,4 @@
-# Preparing for another ultra
+# Training to Ultra
 
 ![](https://github.com/poc1673/poc1673.github.io/blob/master/img/training_for_ultra/DSC_0052.JPG)
 
