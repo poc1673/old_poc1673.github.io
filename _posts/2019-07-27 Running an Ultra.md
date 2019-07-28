@@ -18,7 +18,7 @@ It's easy to take the difference between a country trail and a city road for gra
 
 Denver is a great place to prepare for this though - I've been aiming at taking two trips out to local trails like the North trail loop for my long runs. This last Saturday I completed a trail marathon on the North table loop which was a completely different animal from running the same distance in the city.
 
-![](C:\Users\USER\Documents\Personal\DSC_0053.JPG)
+![](https://github.com/poc1673/poc1673.github.io/blob/master/img/training_for_ultra/DSC_0053.JPG)
 
 Hiking has also been fantastic cross training.
 
