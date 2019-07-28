@@ -16,9 +16,9 @@ Trail-races seem similar to a marathon (in that they require running a long dist
 
 It's easy to take the difference between a country trail and a city road for granted. However, the repetition repetitive shock of running on a sidewalk exacerbates any aches or pains you may already have. On the other hand, trails have less impact but make you slow down and demand a degree of attention to the uneven ground.
 
-Denver is a great place to prepare for this though - I've been aiming at taking two trips out to local trails like the North trail loop for my long runs. This last Saturday I completed a trail marathon on the North table loop which was a completely different animal from running the same distance in the city.
-
 ![](https://github.com/poc1673/poc1673.github.io/blob/master/img/training_for_ultra/runpic1.jpg)
+
+Denver is a great place to prepare for this though - I've been aiming at taking two trips out to local trails like the North trail loop for my long runs. This last Saturday I completed a trail marathon on the North table loop which was a completely different animal from running the same distance in the city.
 
 Hiking has also been fantastic cross training.
 
