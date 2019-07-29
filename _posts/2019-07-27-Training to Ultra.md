@@ -1,5 +1,4 @@
 # Training to Ultra
-<div style="text-align: right"> your-text-here </div>
 ![](https://github.com/poc1673/poc1673.github.io/blob/master/img/training_for_ultra/DSC_0052.JPG)
 I began training for ultra-running after I moved to Pittsburgh a couple of years ago. I've only managed to get one race under my belt so far (the new defunct Lt. JC Stone 50K in North Park). Since I've moved to Denver, it's taken me some time to get back into "running shape"; it took me nearly a month to acclimatize to the elevation here.
 
