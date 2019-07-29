@@ -1,6 +1,6 @@
 # Training to Ultra
 
-![](img/training_for_ultra/DSC_0052.JPG)
+![](https://github.com/poc1673/poc1673.github.io/blob/master/img/training_for_ultra/DSC_0052.JPG)
 
 I began training for ultra-running after I moved to Pittsburgh a couple of years ago. I've only managed to get one race under my belt so far (the new defunct Lt. JC Stone 50K in North Park). Since I've moved to Denver, it's taken me some time to get back into "running shape"; it took me nearly a month to acclimatize to the elevation here.
 
@@ -16,7 +16,7 @@ Trail-races seem similar to a marathon (in that they require running a long dist
 
 It's easy to take the difference between a country trail and a city road for granted. However, the repetition repetitive shock of running on a sidewalk exacerbates any aches or pains you may already have. On the other hand, trails have less impact but make you slow down and demand a degree of attention to the uneven ground.
 
-![](img/training_for_ultra/runpic1.jpg)
+![](https://github.com/poc1673/poc1673.github.io/blob/master/img/training_for_ultra/runpic1.jpg?raw=true)
 
 Denver is a great place to prepare for this though - I've been aiming at taking two trips out to local trails like the North trail loop for my long runs. This last Saturday I completed a trail marathon on the North table loop which was a completely different animal from running the same distance in the city.
 
