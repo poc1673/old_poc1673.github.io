@@ -1,0 +1,97 @@
+---
+title: "Notes on Non-Stationarity"
+author: "Peter Caya"
+date: "August 2, 2019"
+output: html_document
+---
+
+
+# What is a Stationary Time Series?
+
+*Definition*: A stationary time series is one whose statistical properties such as mean, variance, autocorrelation, etc. are all constant over time. Most statistical forecasting methods are based on the assumption that the time series can be rendered approximately stationary (i.e., "stationarized") through the use of mathematical transformations.
+
+# What is a Unit Root?
+
+We can build a simple AR model with 1 lag factor for a time series. In other words, the values will be:
+
+$$ y_t = \rho y_{t-1}+\epsilon_t $$
+
+If $\rho=1$, then the variable has a unit root, or, alternatively can be said to be cointegrated by the order of 1. If $\rho < |1|$, we can take the first difference of the process and arrive at a stationary time series by removing the unit root:
+
+$$ y_t - y_{t-1} = \rho(y_{t-1} - y_{t-2})+(\epsilon_{t-1} - \epsilon_{t-2}) $$
+
+
+## Example of Stationarity
+
+```{r}
+library(pacman)
+p_load(astsa,ggfortify,ggplot2,data.table)
+autoplot(gtemp)+theme_bw()+ggtitle("Plot of Global Temperature Deviations from the 1951-1980 Average")
+```
+
+
+```{r}
+acf2(gtemp)
+```
+
+
+## Plot Out Fitted Lines
+
+The urca package provides a suite of functions which allow you to test for stationarity in a time series. Even better - it provides tools to guage stationarity (or lack thereof) visually. I'll concentrate on this here.
+
+The Dickey-Fuller test tests for a unit root using the equation:
+
+$$  \delta y_t = (1-\rho)y_{t-1}+\mu$$
+
+If $\rho$ is judged to be equal to 1, then there is a unit root. Let's test a model of this form using a regression model:
+
+```{r}
+reg_fun <- lm(formula = diff(gtemp)~lag(gtemp,k = 1)-1 + lag(diff(gtemp),k = 1))
+```
+
+
+
+
+
+
+```{r}
+
+```
+
+
+
+# Testing for Stationarity/Non-stationarity
+
+Several tests are available for testing for a unit root (non-stationarity). 
+
+## Dickey-Fuller
+
+To perform the Dickey-Fuller test, a regression model of the form:
+
+$$ \Delta y_t = (\rho -1) y_{t-1}+u_t \equiv \delta y_{t-1}+u_t $$
+
+
+is created. The test for the unit root then becomes a matter of testing if $\delta=0$. To determine whether the value passes the critical-value, we use the Dickey Fuller table.
+
+
+
+
+
+### Augmented Dicket-Fuller
+
+
+
+
+## Phillips-Perron
+
+
+## DF-GLS
+
+
+
+
+# References:
+
+* https://en.wikipedia.org/wiki/Dickey%E2%80%93Fuller_test
+* https://en.wikipedia.org/wiki/Augmented_Dickey%E2%80%93Fuller_test
+* https://en.wikipedia.org/wiki/KPSS_test
