@@ -1,5 +1,3 @@
-# Ultra in Retrospective: Indian Creek Fifties
-
 Last Saturday I finished my first trail ultra - the Indian Creek Fifties just south of Denver. Finishing was nothing short of exhilarating, but the race was a slog for me.
 
 I capped off my training with a 24 mile trail run followed by a 29 mile road run the day week later. I tapered for three weeks before the run. Despite the prep, I was unprepared for how steep the training was. The race had more than 8,000 feet of elevation gain over 34 miles while my hardest run was a marathon with 5,400 feet elevation gain.
