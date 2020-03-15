@@ -1,14 +1,3 @@
----
-title: "Firth's Logistic Regression"
-author: "Peter Caya"
-date: "3/14/2020"
-output: 
-   html_document:
-      keep_md: yes
----
-
-
-
 # Motivation for Firth's logistic regression:
 
 A key problem which can throw off the performance of logistic regression is the possibility of bias in the data.  In a 1997 paper, David Firth suggested a tweak to the maximum likelihood function to compensate for the bias term. You can find it in [1]. 
