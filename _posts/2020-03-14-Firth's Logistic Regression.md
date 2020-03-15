@@ -4,7 +4,7 @@ A key problem which can throw off the performance of logistic regression is the 
 
 Typically, we define the critical value of the maximum likelihood function <img src="http://latex.codecogs.com/gif.latex? l" border="0"/> as being:
 
-<img src="http://latex.codecogs.com/gif.latex? \nabla l  = U(\theta) = 0" border="0"/>
+<img src="https://latex.codecogs.com/gif.latex?%5Cnabla%20l%20%3D%20U%28%5Ctheta%29%20%3D%200" border="0"/>
 
 We may change the maximum likelihood function as <img src="http://latex.codecogs.com/gif.latex?U(\theta) = l'(\theta) = t - K(\theta)" border="0"/>. This additive term <img src="http://latex.codecogs.com/gif.latex? t" border="0"/> impacts the location of the optimal solution, but doesn't change the overall shape.
 
@@ -52,10 +52,10 @@ example_model$coefficients
 ## Quasi-complete Separation
 
 
-If a data-set doesn't meet what was described earlier as separation, the data-set may still be quasi-complete separation if the value of $y$ splits the values of $x$. To reverse the example above:
+If a data-set doesn't meet what was described earlier as separation, the data-set may still be quasi-complete separation if the value of <img src="http://latex.codecogs.com/gif.latex? y" border="0"/> splits the values of <img src="http://latex.codecogs.com/gif.latex? x" border="0"/>. To reverse the example above:
 
 
-<img src="http://latex.codecogs.com/gif.latex? https://latex.codecogs.com/gif.latex?x%20%5Cin%20%5Cbegin%7Bcases%7D%20%5B0%2C4%29%20%26%20%5Ctext%7Bif%20%7D%20y%20%3D0%20%5C%5C%20%5B4%2C%5Cinfty%29%20%26%20%5Ctext%7Bif%20%7D%20y%20%3D1%20%5Cend%7Bcases%7D" border="0"/>  
+<img src="https://latex.codecogs.com/gif.latex?x%20%5Cin%20%5Cbegin%7Bcases%7D%20%5B0%2C4%29%20%26%20%5Ctext%7Bif%20%7D%20y%20%3D0%20%5C%5C%20%5B4%2C%5Cinfty%29%20%26%20%5Ctext%7Bif%20%7D%20y%20%3D1%20%5Cend%7Bcases%7D" border="0"/>  
 
 would be an example of quasi-complete separation.
 
@@ -97,6 +97,8 @@ vic                          2.406                       2.269
 vicl                        -2.246                      -2.111
 vis                         -0.820                      -0.788
 dia                         16.734                       3.096
+
+
 We can see that the there is a marked difference in the coefficient for the dia parameter in the data-set above. Depending on how much we think the results above make sense, we may have more luck with Firth's logistic regression when trying to project case out of the training sample.
 
 
