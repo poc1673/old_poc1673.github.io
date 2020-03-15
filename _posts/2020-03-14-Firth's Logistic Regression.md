@@ -12,7 +12,7 @@ In the case of logistic regression, we can define the modified score function as
 
 <img src="https://latex.codecogs.com/gif.latex?U%28%5Cbeta_r%29%5E*%20%5Cequiv%20U%28%5Cbeta_r%29%20&plus;%20%5Cfrac%7B1%7D%7B2%7Dtrace%5CBig%5BI%28%5Cbeta%29%5E%7B-1%7D%20%5Cfrac%7B%5Cpartial%20I%28%5Cbeta%29%7D%7B%5Cpartial%5Cbeta_r%7D%20%5CBig%5D%20%3D%200%20%5C%3B%5C%3B%5C%3B%20r%20%5Cin%20%5B1%2C...%2Ck%29" border="0"/>
 
-Where $I(\beta)$ is the information matrix.
+Where <img src="http://latex.codecogs.com/gif.latex? I(\beta)" border="0"/> is the information matrix.
 
 While the original aim of this method was to simply decrease the bias (and act as a regularizer for logistic regression), it turns out that it provides a useful solution to a specific problem in classification: separation. 
 
@@ -23,21 +23,17 @@ The basis of separation in data is rooted in perfect multicollinearity between t
 
 Separation occurs when we can define some hyperplane in the data which perfectly splits the two classes in a binary logistic regression. 
 
-Consider the case where you have some variable $x \in \mathbb{R}$ as a predictor of a binary event $y \in \{0,1\}$. In this contrived example let:
+Consider the case where you have some variable <img src="https://latex.codecogs.com/gif.latex?x%20%5Cin%20%5Cmathbb%7BR%7D" border="0"/>  as a predictor of a binary event <img src="http://latex.codecogs.com/gif.latex? y \in \{0,1\}" border="0"/>. In this contrived example let:
 
-$$ y =  \begin{cases} 
-      0 & \text{if } x< 4 \\
-      \frac{100-x}{100} & 4 \leq x 
-   \end{cases}
- $$
+<img src="https://latex.codecogs.com/gif.latex?y%20%3D%20%5Cbegin%7Bcases%7D%200%20%26%20%5Ctext%7Bif%20%7D%20x%3C%204%20%5C%5C%20%5Cfrac%7B100-x%7D%7B100%7D%20%26%204%20%5Cleq%20x%20%5Cend%7Bcases%7D" border="0"/>
 
 Consider the case that you are fitting a model of the form:
 
+<img src="https://latex.codecogs.com/gif.latex?p%20%3D%20%5Cfrac%7B1%7D%7B1&plus;exp%28-%28%5Cbeta_0%20&plus;%20%5Cbeta_1%20x%29%29%7D" border="0"/>
 
-$$ p = \frac{1}{1+exp(-(\beta_0 + \beta_1 x))} $$
 IE - a very simple binary logistic regression model.
 
-If this is the case, then $\beta_1$ will explode. The intuitive explanation for this is that the model should become more accurate as $\beta_1$ gets larger. Here's a trivial example with 10000 samples:
+If this is the case, then <img src="http://latex.codecogs.com/gif.latex? \beta_1" border="0"/>  will explode. The intuitive explanation for this is that the model should become more accurate as <img src="http://latex.codecogs.com/gif.latex? \beta_1" border="0"/> gets larger. Here's a trivial example with 10000 samples:
 
 
 ```r
@@ -58,11 +54,8 @@ example_model$coefficients
 
 If a data-set doesn't meet what was described earlier as separation, the data-set may still be quasi-complete separation if the value of $y$ splits the values of $x$. To reverse the example above:
 
-$$ x \in  \begin{cases} 
-      [0,4) & \text{if } y =0 \\
-      [4,\infty) & \text{if } y =1   
-   \end{cases}
- $$
+
+<img src="http://latex.codecogs.com/gif.latex? https://latex.codecogs.com/gif.latex?x%20%5Cin%20%5Cbegin%7Bcases%7D%20%5B0%2C4%29%20%26%20%5Ctext%7Bif%20%7D%20y%20%3D0%20%5C%5C%20%5B4%2C%5Cinfty%29%20%26%20%5Ctext%7Bif%20%7D%20y%20%3D1%20%5Cend%7Bcases%7D" border="0"/>  
 
 would be an example of quasi-complete separation.
 
@@ -132,8 +125,7 @@ In my specific domain (finance), there generally should be no hard and fast rule
 # References:
 1. Bias reduction of maximum likelihood estimates - David Firth, 1997
 2. A solution to the problem of separation in logistic regression - George Heinz and Michael Schemper, 2002
-3. Advances in Financial Machine Learning - Marcos Luiz Prado
-4. [What is complete or quasi-Complete separation and How do we deal with them ](https://stats.idre.ucla.edu/other/mult-pkg/faq/general/faqwhat-is-complete-or-quasi-complete-separation-in-logisticprobit-regression-and-how-do-we-deal-with-them/)
+3. [What is complete or quasi-Complete separation and How do we deal with them ](https://stats.idre.ucla.edu/other/mult-pkg/faq/general/faqwhat-is-complete-or-quasi-complete-separation-in-logisticprobit-regression-and-how-do-we-deal-with-them/)
 
 
 
