@@ -1,12 +1,16 @@
+<style>
+body {
+text-align: justify}
+</style>
 # Motivation for Firth's logistic regression:
 
-A key problem which can throw off the performance of logistic regression is the possibility of bias in the data.  In a 1997 paper, David Firth suggested a tweak to the maximum likelihood function to compensate for the bias term. You can find it in [1]. 
+The existence of bias in a logistic regression model is bias leading to inaccurate results.  In a 1997 paper, David Firth suggested a tweak to the maximum likelihood function to compensate for the bias term. You can find it in [1]. 
 
-Typically, we define the critical value of the maximum likelihood function <img src="http://latex.codecogs.com/gif.latex? l" border="0"/> as being:
+We normally define the  maximum likelihood function <img src="http://latex.codecogs.com/gif.latex? l" border="0"/> as:
 
 <img src="https://latex.codecogs.com/gif.latex?%5Cnabla%20l%20%3D%20U%28%5Ctheta%29%20%3D%200" border="0"/>
 
-We may change the maximum likelihood function as <img src="http://latex.codecogs.com/gif.latex?U(\theta) = l'(\theta) = t - K(\theta)" border="0"/>. This additive term <img src="http://latex.codecogs.com/gif.latex? t" border="0"/> impacts the location of the optimal solution, but doesn't change the overall shape.
+We may change the maximum likelihood function to <img src="http://latex.codecogs.com/gif.latex?U(\theta) = l'(\theta) = t - K(\theta)" border="0"/>. This additive term <img src="http://latex.codecogs.com/gif.latex? t" border="0"/> impacts the location of the optimal solution, but doesn't change the overall shape. 
 
 In the case of logistic regression, we can define the modified score function as:
 
@@ -19,11 +23,12 @@ While the original aim of this method was to simply decrease the bias (and act a
 # Separation of Data
 
 ## Definition:
-The basis of separation in data is rooted in perfect multicollinearity between the dependent variable and the independent variable.
+The basis of separation in data is rooted in multicollinearity between the dependent variable and the independent variable.
+Separation occurs when we can define a hyperplane in the data which splits the two dependent variable classes:
 
-Separation occurs when we can define some hyperplane in the data which perfectly splits the two classes in a binary logistic regression. 
+Consider the case where you have some variable <img src="https://latex.codecogs.com/gif.latex?x%20%5Cin%20%5Cmathbb%7BR%7D" border="0"/>  as a predictor of a binary event <img src="http://latex.codecogs.com/gif.latex? y \in \{0,1\}" border="0"/>. 
 
-Consider the case where you have some variable <img src="https://latex.codecogs.com/gif.latex?x%20%5Cin%20%5Cmathbb%7BR%7D" border="0"/>  as a predictor of a binary event <img src="http://latex.codecogs.com/gif.latex? y \in \{0,1\}" border="0"/>. In this contrived example let:
+In this contrived example define <img src="http://latex.codecogs.com/gif.latex? y" border="0"/> as:
 
 <img src="https://latex.codecogs.com/gif.latex?y%20%3D%20%5Cbegin%7Bcases%7D%200%20%26%20%5Ctext%7Bif%20%7D%20x%3C%204%20%5C%5C%20%5Cfrac%7B100-x%7D%7B100%7D%20%26%204%20%5Cleq%20x%20%5Cend%7Bcases%7D" border="0"/>
 
@@ -33,8 +38,7 @@ Consider the case that you are fitting a model of the form:
 
 IE - a very simple binary logistic regression model.
 
-If this is the case, then <img src="http://latex.codecogs.com/gif.latex? \beta_1" border="0"/>  will explode. The intuitive explanation for this is that the model should become more accurate as <img src="http://latex.codecogs.com/gif.latex? \beta_1" border="0"/> gets larger. Here's a trivial example with 10000 samples:
-
+If there is perfect separation like the example I've shown above, then <img src="http://latex.codecogs.com/gif.latex? \beta_1" border="0"/>  will be set at an arbitrarily high value in order to drive the probability value to 1 when $x>4$. The intuitive explanation for this is that the model should become more accurate as <img src="http://latex.codecogs.com/gif.latex? \beta_1" border="0"/> gets larger. Here's a trivial example with 10000 samples:
 
 ```r
 set.seed(13)
@@ -52,8 +56,9 @@ example_model$coefficients
 ## Quasi-complete Separation
 
 
-If a data-set doesn't meet what was described earlier as separation, the data-set may still be quasi-complete separation if the value of <img src="http://latex.codecogs.com/gif.latex? y" border="0"/> splits the values of <img src="http://latex.codecogs.com/gif.latex? x" border="0"/>. To reverse the example above:
+If a data-set doesn't meet what was described earlier as separation, the data-set may still exhibit quasi-complete separation if the value of <img src="http://latex.codecogs.com/gif.latex? y" border="0"/> splits the values of <img src="http://latex.codecogs.com/gif.latex? x" border="0"/>. 
 
+Reversing the example above:
 
 <img src="https://latex.codecogs.com/gif.latex?x%20%5Cin%20%5Cbegin%7Bcases%7D%20%5B0%2C4%29%20%26%20%5Ctext%7Bif%20%7D%20y%20%3D0%20%5C%5C%20%5B4%2C%5Cinfty%29%20%26%20%5Ctext%7Bif%20%7D%20y%20%3D1%20%5Cend%7Bcases%7D" border="0"/>  
 
@@ -98,22 +103,19 @@ kable(data.frame("Logistic Regression" = normal_reg$coefficients,"Firth Logistic
 |vis         |              -0.820|                    -0.788|
 |dia         |              16.734|                     3.096|
 
-We can see that the there is a marked difference in the coefficient for the dia parameter in the data-set above. Depending on how much we think the results above make sense, we may have more luck with Firth's logistic regression when trying to project case out of the training sample.
+We can see that there is a marked difference in the coefficient for the dia parameter in the data-set above. Depending on how much we think the results above make sense, we may have more luck with Firth's logistic regression when trying to project case out of the training sample.
 
-# Alternatives to Firth's Logistic Regression
+# Caution on Firth's Logistic Regression
 
-While reviewing this methodology, it occurred to me that in many cases if you are compensating for separation you are compensating for theoretical problems. In that case, this is only appropriate if the modeler has seriously considered the theoretical reasons for why there is separation in the data in the first place. A good example is from the first example from [2] regarding the endometrial cancer study:
+It occurred to me that compensating for separation should first imply theoretical problems in the model. Looking into ways of managing separation is only appropriate if the modeler has seriously considered the theoretical reasons for why there is separation in the data in the first place. A good example is from the first example from [2] regarding the endometrial cancer study:
 
-> Because the other two risk factors are continuous, exact logistic regression analysis is not available. As the medical investigators were interested in the effect of neovasculization, omission of this risk factor (option 1 of Section 1) cannot be considered here. 
+> As the medical investigators were interested in the effect of neovasculization, omission of this risk factor (option 1 of Section 1) cannot be considered here. 
 
-In my specific domain (finance), there generally should be no hard and fast rules dictating the binary outcome. If there are, it's worth looking into the theory behind the model being fit.
+In my specific domain (finance),  non-trivial hard and fast rules perfectly dividing classes are very rare. If there are, it's worth looking into the theory behind the model being fit. 
 
 # References:
-1. Bias reduction of maximum likelihood estimates - David Firth, 1997
-2. A solution to the problem of separation in logistic regression - George Heinz and Michael Schemper, 2002
+1. [Bias reduction of maximum likelihood estimates - David Firth, 1997](https://www2.stat.duke.edu/~scs/Courses/Stat376/Papers/GibbsFieldEst/BiasReductionMLE.pdf)
+2. [A solution to the problem of separation in logistic regression - George Heinz and Michael Schemper, 2002](https://www.ncbi.nlm.nih.gov/pubmed/12210625  )
 3. [What is complete or quasi-Complete separation and How do we deal with them ](https://stats.idre.ucla.edu/other/mult-pkg/faq/general/faqwhat-is-complete-or-quasi-complete-separation-in-logisticprobit-regression-and-how-do-we-deal-with-them/)
-
-
-
 
 
