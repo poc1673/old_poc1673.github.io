@@ -4,6 +4,7 @@ A key problem which can throw off the performance of logistic regression is the 
 
 Typically, we define the critical value of the maximum likelihood function $l$ as being:
 
+<img src="http://latex.codecogs.com/gif.latex?1+sin(x)" border="0"/>
 $$ \nabla l  = U(\theta) = 0 $$
 We may change the maximum likelihood function as $U(\theta) = l'(\theta) = t - K(\theta)$. This additive term $t$ impacts the location of the optimal solution, but doesn't change the overall shape.
 
