@@ -1,8 +1,8 @@
+# Motivation for Firth's logistic regression:
 <style>
 body {
 text-align: justify}
 </style>
-# Motivation for Firth's logistic regression:
 
 The existence of bias in a logistic regression model is bias leading to inaccurate results.  In a 1997 paper, David Firth suggested a tweak to the maximum likelihood function to compensate for the bias term. You can find it in [1]. 
 
