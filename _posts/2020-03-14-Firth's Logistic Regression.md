@@ -79,7 +79,7 @@ plot(x = sex2$case,sex2$dia)
 ```
 
 
-![](https://github.com/poc1673/poc1673.github.io/blob/master/img/Firth_Post/plots_for_firth post.png)
+![](https://github.com/poc1673/poc1673.github.io/blob/master/img/Firth_Post/plots_for_firth_post.png)
 
 We can see that we have quasi-separation for dia. $dia =0$ only if $case = 1$. Let's compare the results of a regression model with vanilla logistic regression, and Firth's logistic regression as implemented in George Heinze's *logistf* package:
 
