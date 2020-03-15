@@ -88,33 +88,17 @@ We can see that we have quasi-separation for dia. $dia =0$ only if $case = 1$. L
 kable(data.frame("Logistic Regression" = normal_reg$coefficients,"Firth Logistic Regression" = firth_reg$coefficients),digits = 3)
 ```
 
-               Logistic.Regression   Firth.Logistic.Regression
-------------  --------------------  --------------------------
-(Intercept)                  0.128                       0.120
-age                         -1.164                      -1.106
-oc                          -0.074                      -0.069
-vic                          2.406                       2.269
-vicl                        -2.246                      -2.111
-vis                         -0.820                      -0.788
-dia                         16.734                       3.096
-
+|            | Logistic.Regression| Firth.Logistic.Regression|
+|:-----------|-------------------:|-------------------------:|
+|(Intercept) |               0.128|                     0.120|
+|age         |              -1.164|                    -1.106|
+|oc          |              -0.074|                    -0.069|
+|vic         |               2.406|                     2.269|
+|vicl        |              -2.246|                    -2.111|
+|vis         |              -0.820|                    -0.788|
+|dia         |              16.734|                     3.096|
 
 We can see that the there is a marked difference in the coefficient for the dia parameter in the data-set above. Depending on how much we think the results above make sense, we may have more luck with Firth's logistic regression when trying to project case out of the training sample.
-
-
-```r
-kable(normal_reg$coefficients)
-```
-
-                        x
-------------  -----------
-(Intercept)     0.1283465
-age            -1.1643939
-oc             -0.0735641
-vic             2.4059255
-vicl           -2.2461950
-vis            -0.8201143
-dia            16.7342250
 
 # Alternatives to Firth's Logistic Regression
 
