@@ -4,13 +4,13 @@ A key problem which can throw off the performance of logistic regression is the 
 
 Typically, we define the critical value of the maximum likelihood function <img src="http://latex.codecogs.com/gif.latex? l" border="0"/> as being:
 
-<img src="http://latex.codecogs.com/gif.latex?\nabla l  = U(\theta) = 0" border="0"/>
+<img src="http://latex.codecogs.com/gif.latex? \nabla l  = U(\theta) = 0" border="0"/>
 
 We may change the maximum likelihood function as <img src="http://latex.codecogs.com/gif.latex?U(\theta) = l'(\theta) = t - K(\theta)" border="0"/>. This additive term <img src="http://latex.codecogs.com/gif.latex? t" border="0"/> impacts the location of the optimal solution, but doesn't change the overall shape.
 
 In the case of logistic regression, we can define the modified score function as:
 
-$$ U(\beta_r)^* \equiv U(\beta_r) + \frac{1}{2}trace\Big[I(\beta)^{-1}  \frac{\partial I(\beta)}{\partial\beta_r} \Big] = 0 \;\;\; r \in [1,...,k)  $$ 
+<img src="http://latex.codecogs.com/gif.latex? U(\beta_r)^* \equiv U(\beta_r) + \frac{1}{2}trace\Big[I(\beta)^{-1}  \frac{\partial I(\beta)}{\partial\beta_r} \Big] = 0 \;\;\; r \in [1,...,k)  " border="0"/>
 Where $I(\beta)$ is the information matrix.
 
 While the original aim of this method was to simply decrease the bias (and act as a regularizer for logistic regression), it turns out that it provides a useful solution to a specific problem in classification: separation. 
