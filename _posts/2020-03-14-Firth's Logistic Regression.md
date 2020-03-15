@@ -1,8 +1,5 @@
 # Motivation for Firth's logistic regression:
-<style>
-body {
-text-align: justify}
-</style>
+<div style="text-align: right"> 
 
 The existence of bias in a logistic regression model is bias leading to inaccurate results.  In a 1997 paper, David Firth suggested a tweak to the maximum likelihood function to compensate for the bias term. You can find it in [1]. 
 
@@ -119,3 +116,4 @@ In my specific domain (finance),  non-trivial hard and fast rules perfectly divi
 3. [What is complete or quasi-Complete separation and How do we deal with them ](https://stats.idre.ucla.edu/other/mult-pkg/faq/general/faqwhat-is-complete-or-quasi-complete-separation-in-logisticprobit-regression-and-how-do-we-deal-with-them/)
 
 
+</div>
