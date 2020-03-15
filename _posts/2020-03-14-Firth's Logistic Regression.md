@@ -10,7 +10,8 @@ We may change the maximum likelihood function as <img src="http://latex.codecogs
 
 In the case of logistic regression, we can define the modified score function as:
 
-<img src="http://latex.codecogs.com/gif.latex? U(\beta_r)^* \equiv U(\beta_r) + \frac{1}{2}trace\Big[I(\beta)^{-1}  \frac{\partial I(\beta)}{\partial\beta_r} \Big] = 0 \;\;\; r \in [1,...,k)  " border="0"/>
+<img src="https://latex.codecogs.com/gif.latex?U%28%5Cbeta_r%29%5E*%20%5Cequiv%20U%28%5Cbeta_r%29%20&plus;%20%5Cfrac%7B1%7D%7B2%7Dtrace%5CBig%5BI%28%5Cbeta%29%5E%7B-1%7D%20%5Cfrac%7B%5Cpartial%20I%28%5Cbeta%29%7D%7B%5Cpartial%5Cbeta_r%7D%20%5CBig%5D%20%3D%200%20%5C%3B%5C%3B%5C%3B%20r%20%5Cin%20%5B1%2C...%2Ck%29" border="0"/>
+
 Where $I(\beta)$ is the information matrix.
 
 While the original aim of this method was to simply decrease the bias (and act as a regularizer for logistic regression), it turns out that it provides a useful solution to a specific problem in classification: separation. 
