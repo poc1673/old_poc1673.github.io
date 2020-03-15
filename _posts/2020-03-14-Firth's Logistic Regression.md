@@ -2,11 +2,11 @@
 
 A key problem which can throw off the performance of logistic regression is the possibility of bias in the data.  In a 1997 paper, David Firth suggested a tweak to the maximum likelihood function to compensate for the bias term. You can find it in [1]. 
 
-Typically, we define the critical value of the maximum likelihood function $l$ as being:
+Typically, we define the critical value of the maximum likelihood function <img src="http://latex.codecogs.com/gif.latex? l" border="0"/> as being:
 
 <img src="http://latex.codecogs.com/gif.latex?\nabla l  = U(\theta) = 0" border="0"/>
 
-We may change the maximum likelihood function as $U(\theta) = l'(\theta) = t - K(\theta)$. This additive term $t$ impacts the location of the optimal solution, but doesn't change the overall shape.
+We may change the maximum likelihood function as <img src="http://latex.codecogs.com/gif.latex?U(\theta) = l'(\theta) = t - K(\theta)" border="0"/>. This additive term <img src="http://latex.codecogs.com/gif.latex? t" border="0"/> impacts the location of the optimal solution, but doesn't change the overall shape.
 
 In the case of logistic regression, we can define the modified score function as:
 
