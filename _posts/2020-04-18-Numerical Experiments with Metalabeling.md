@@ -6,13 +6,7 @@
 
 Metalabeling is a secondary machine learning model built on the results of the primary classification model to identify and reclassify false positives. It was first suggested in [Advances in Financial Machine Learning](https://www.amazon.com/Advances-Financial-Machine-Learning-Marcos-ebook/dp/B079KLDW21/ref=sr_1_3?crid=2YD9Z0HQ4TRR0&dchild=1&keywords=advances+in+financial+machine+learning&qid=1587241148&sprefix=advances+in+machine%2Caps%2C207&sr=8-3) by Marcos López de Prado and given the relative novelty of the method (the book was published in 2018), I wanted to do a short test.
 
-To provide more detail: When we perform metalabeling we fit a primary classification model on the data to classify the results based on an initial set of parameters. Once the model is fit, the we compare the results to the predictions and divides them into two groups (the metalabels):
-
-<img src="https://latex.codecogs.com/gif.latex?O_t=\text { Onset event at time bin } t " />
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=0:&space;\text{Correctly&space;classified&space;as&space;positive}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?0:&space;\text{Correctly&space;classified&space;as&space;positive}" title="0: \text{Correctly classified as positive}" /></a>
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=1:&space;\text{Incorrectly&space;classified&space;as&space;positive}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?1:&space;\text{Incorrectly&space;classified&space;as&space;positive}" title="1: \text{Incorrectly classified as positive}" /></a>
+To provide more detail: When we perform metalabeling we fit a primary classification model on the data to classify the results based on an initial set of parameters. Once the model is fit, the we compare the results to the predictions and divides them into two groups (the metalabels): 0 if the observation is a true positive, 1 if it is a false positive.
 
 These two groups are then used to fit a **secondary model** which detects the false positives. This secondary model is used to filter the results. 
 
