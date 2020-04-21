@@ -8,6 +8,8 @@ Metalabeling is a secondary machine learning model built on the results of the p
 
 To provide more detail: When we perform metalabeling we fit a primary classification model on the data to classify the results based on an initial set of parameters. Once the model is fit, the we compare the results to the predictions and divides them into two groups (the metalabels):
 
+<img src="https://latex.codecogs.com/gif.latex?O_t=\text { Onset event at time bin } t " />
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=0:&space;\text{Correctly&space;classified&space;as&space;positive}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?0:&space;\text{Correctly&space;classified&space;as&space;positive}" title="0: \text{Correctly classified as positive}" /></a>
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=1:&space;\text{Incorrectly&space;classified&space;as&space;positive}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?1:&space;\text{Incorrectly&space;classified&space;as&space;positive}" title="1: \text{Incorrectly classified as positive}" /></a>
