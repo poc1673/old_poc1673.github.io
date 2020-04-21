@@ -1,4 +1,4 @@
-
+<div style="text-align: justify"> 
 # Numerical Experiment with Metalabeling
 
 # What is Metalabeling?
@@ -283,3 +283,4 @@ The in-sample results are as-expected. The use of the secondary model removes al
 # Summary
 
 Metalabeling offers a useful and simple tool for improving the effectiveness of machine learning models by training a secondary model to audit the positive results of the original model. Taken on face value, it's a very simple example of ensemble modeling. On a personal level, I find the simplicity in justifying and explaining this tool to an outsider. However, using this strategy places more weight on outcomes analysis since by forming this second model, it raises the likelihood of overfitting.
+</div>
